@@ -11,6 +11,7 @@ import android.widget.CompoundButton;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.todolist.AddNewTask;
 import com.example.todolist.MainActivity;
 import com.example.todolist.Model.ToDoModel;
 import com.example.todolist.R;
@@ -84,6 +85,10 @@ public class ToDoAdapter extends RecyclerView.Adapter<ToDoAdapter.MyViewHolder> 
         Bundle bundle = new Bundle();
         bundle.putInt("id", item.getId());
         bundle.putString("task", item.getTask());
+
+        AddNewTask taskDialog = new AddNewTask();
+        taskDialog.setArguments(bundle);
+        taskDialog.show(activity.getSupportFragmentManager(), "edit_task");
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{

@@ -3,6 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tittle"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"/>
+
     <EditText
         android:id="@+id/editText"
         android:layout_width="match_parent"
@@ -11,12 +20,39 @@
         android:textSize="20sp"
         android:paddingStart="7dp"
         android:paddingEnd="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true"
+        />
+
+    <TextView
+        android:id="@+id/Deskripsi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deskripsi"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="10dp"/>
+
+    <EditText
+        android:id="@+id/editDeskripsi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Description Here"
+        android:textSize="20sp"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/Deskripsi"
+        android:layout_alignParentEnd="true"
         />
 
     <Button
+        android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText"
+        android:layout_below="@+id/editDeskripsi"
         android:text="Save"
         android:textSize="20sp"
         android:layout_alignParentEnd="true"
